@@ -1,6 +1,7 @@
 #VideoCard {
   width: 400px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  padding-top: 10px;
 }
 
 #VideoCard #cover_photo {

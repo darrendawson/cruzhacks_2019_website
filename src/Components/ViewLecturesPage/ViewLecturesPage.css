@@ -77,3 +77,7 @@
   text-align: center;
   margin-left: 30px;
 }
+
+#ViewLecturesPage .selected_video_border {
+  background-color: red;
+}

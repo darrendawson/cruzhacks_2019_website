@@ -6,14 +6,28 @@ import VideoCard from '../Display/VideoCard/VideoCard.js';
 class ViewLecturesPage extends Component {
 
 
+  // On Click ------------------------------------------------------------------
+
+  onClick_SelectLecture = (lectureNumber) => {
+    this.props.update(lectureNumber, this.props.selectedLectureTag);
+  }
+
+  // Render --------------------------------------------------------------------
+
   renderVideosSidebar = () => {
     let results = [];
     for (let i = 0; i < this.props.videos.length; i++) {
       let video = this.props.videos[i];
-      let borderCSS = (video['lectureNumber'] === this.props.lectureNumber) ? "selected_video_border": "";
+
+      let borderCSS;
+      if (video['lectureNumber'] === this.props.lectureNumber) {
+        borderCSS = "video_container primary_highlight_3_bg";
+      } else {
+        borderCSS = "video_container primary_color_6_hover_bg"
+      }
 
       results.push(
-        <div className="video_container primary_color_6_hover_bg">
+        <div className={borderCSS} onClick={() => this.onClick_SelectLecture(video.lectureNumber)}>
           <VideoCard
             title={video.title}
             date={video.date}
