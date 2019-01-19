@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ViewLecturesPage.css';
 
 import VideoCard from '../Display/VideoCard/VideoCard.js';
+import SlideView from '../Display/Slides/SlideView.js';
 
 class ViewLecturesPage extends Component {
 
@@ -42,6 +43,20 @@ class ViewLecturesPage extends Component {
   }
 
 
+  renderSlides = () => {
+    return (
+      <SlideView
+        slideNumber={1}
+        duration={5}
+        summary={['summary point 1', 'summary point 2', 'summary point 3']}
+        keywords={['keyword 1', 'keyword 2']}
+        similarKeywords={['similar 1', 'similar 2']}
+        coverPhoto="https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/49259965-3e53-419d-a60b-0d5bb7591fd4/attachment-5/screen_primary_1_000s_search.jpg"
+      />
+    );
+  }
+
+
   render() {
     return (
       <div id="ViewLecturesPage" className="">
@@ -59,13 +74,17 @@ class ViewLecturesPage extends Component {
             <div className="flex_grouping_row">
               <input
                 id="search_input"
-                placeholder="Search by concept"
+                placeholder="Search by concept, keyword, or class"
                 className="primary_highlight_3_border"
               />
               <button id="search_button" className="primary_highlight_3_border primary_highlight_3_hover_bg">
                 <h1 id="search_button_text" className="primary_highlight_3_txt primary_color_1_hover_txt">&#x26B2;</h1>
               </button>
             </div>
+          </div>
+
+          <div id="slide_results_container">
+            {this.renderSlides()}
           </div>
         </div>
       </div>

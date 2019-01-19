@@ -37,6 +37,14 @@
   padding-bottom: 10px;
 }
 
+#slide_results_container {
+  width: 100%;
+  height: calc(100% - 81px);
+  display: flex;
+  flex-direction: column;
+}
+
+
 #ViewLecturesPage .flex_grouping_row {
   display: flex;
   flex-direction: row;
