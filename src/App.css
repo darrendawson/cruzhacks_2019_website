@@ -18,6 +18,13 @@
 }
 
 
-h1, h2, h3 {
+h1, h2, p, a {
   margin: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
 }
