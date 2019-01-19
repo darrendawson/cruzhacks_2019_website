@@ -2,11 +2,13 @@
   width: 400px;
   margin-bottom: 15px;
   padding-top: 10px;
+  flex-shrink: 0;
 }
 
 #VideoCard #cover_photo {
   height: 200px;
   width: 100%;
+  flex-shrink: 0;
 }
 
 #VideoCard #title_row_container {

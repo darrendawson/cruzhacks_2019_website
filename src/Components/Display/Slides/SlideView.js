@@ -64,23 +64,19 @@ class SlideView extends Component {
   }
 
   renderRelatedLectures = () => {
-    let video = {
-      title: "title",
-      date: "01/01",
-      keywords: ["k1", "k2"],
-      numKeywordsToRender:2
-    };
 
     if (this.state.expanded) {
 
       let results = [];
       for (let i = 0; i < this.props.relatedLectures.length; i++) {
+        let lecture = this.props.relatedLectures[i];
+
         results.push(
           <VideoCard
-            title={video.title}
-            date={video.date}
-            coverPhoto={video.coverPhoto}
-            keywords={video.keywords}
+            title={lecture.class_name + " " + lecture.lecture_title}
+            date={lecture.date}
+            coverPhoto={lecture.cover_photo}
+            keywords={lecture.keywords}
             numKeywordsToRender={2}
           />
         );

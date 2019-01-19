@@ -15,41 +15,70 @@ class ClassesManager extends Component {
 
   // classes is an array of all classes (with their lectures and slides contained)
   // getSelectedClass searches the array and returns the class that is selected
-  getSelectedClass = () => {
+  getSpecificClass = (classID) => {
     for (let i = 0; i < this.props.classes.length; i++) {
-      if (this.props.selectedClassID === this.props.classes[i]['class_id']) {
+      if (classID === this.props.classes[i]['class_id']) {
         return this.props.classes[i];
       }
     }
   }
 
-  getSelectedLecture = (lectures) => {
+  getSpecificLecture = (lectures, lectureID) => {
     for (let i = 0; i < lectures.length; i++) {
-      if (this.props.selectedLectureID === lectures[i]['lecture_id']) {
+      if (lectureID === lectures[i]['lecture_id']) {
         return lectures[i];
       }
     }
+  }
+
+
+  addRecommendedLecturesToSlides = (slides) => {
+
+    for (let i = 0; i < slides.length; i++) {
+
+      let recommended = slides[i]['related_content']['lectures'];
+      let lectures = [];
+
+      for (let j = 0; j < recommended.length; j++) {
+
+        // find the lecture we want
+        let classID = recommended[j]['class_id'];
+        let lectureID = recommended[j]['lecture_id'];
+        let course = this.getSpecificClass(classID);
+        let lecture = this.getSpecificLecture(course['lectures'], lectureID);
+        lecture['class_id'] = classID;
+        lecture['class_name'] = course['class_name'];
+        lectures.push(lecture);
+      }
+
+      slides[i]['related_content']['lectures'] = lectures;
+    }
+
+    return slides;
   }
 
   // Render --------------------------------------------------------------------
 
   render() {
 
-    let selectedClass = this.getSelectedClass();
-    let lectures = selectedClass['lectures'];
-    let slides = this.getSelectedLecture(lectures);
+    let selectedClass = this.getSpecificClass(this.props.selectedClassID);
+    let possibleLectures = selectedClass['lectures'];
+    let selectedLecture = this.getSpecificLecture(possibleLectures, this.props.selectedLectureID);
+    let slides = selectedLecture['slides'];
+    slides = this.addRecommendedLecturesToSlides(slides);
 
     return (
       <div id="ClassesManager">
         <ViewLecturesPage
           courseTitle={this.props.courseTitle}
-          videos={lectures}
+          videos={possibleLectures}
           lectureNumber={this.props.lectureNumber}
           slides={slides}
 
           classes={this.props.classes}
           update={this.props.update}
-          selectedLectureTag={this.props.selectedLectureTag}
+          selectedLectureID={this.props.selectedLectureID}
+          selectedLectureIDTag={this.props.selectedLectureIDTag}
         />
       </div>
     );

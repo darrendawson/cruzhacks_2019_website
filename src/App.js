@@ -34,8 +34,8 @@ let fakeData = {
           "lecture_id": 1,
           "lecture_number": 1,
           "date": "01/23",
-          "keywords": ["Lecture Keyword 1", "Lecture Keyword 2", "Lecture Keyword 3"],
-          "lecture_title": "Intro to Differential Equations",
+          "keywords": ["Syllabus", "Finals", "Grades"],
+          "lecture_title": "Syllabus + Chapter 0",
           "cover_photo": "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
 
           "slides": [
@@ -44,7 +44,25 @@ let fakeData = {
               "slide_number": 1,
               "slide_title": "Multivariate",
               "duration": 5,
+              "transcription": "this is where the transcription goes",
+              cover_photo:  "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
               "summaries": ["summary 1 sentence", "summary 2 sentence" ],
+              "keywords": [ "slide keyword 1", "slide keyword 2" ],
+
+              "related_content": {
+                "keywords": ["related keyword 1"],
+                "lectures": [{class_id: 1, lecture_id: 2}]
+              }
+            },
+
+            {
+              "slide_id": 2,
+              "slide_number": 2,
+              "slide_title": "Multivariate",
+              "duration": 5,
+              "transcription": "Here's your grade",
+              cover_photo:  "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
+              "summaries": ["Tests make up 20% of your grade", "No Calculator allowed" ],
               "keywords": [ "slide keyword 1", "slide keyword 2" ],
 
               "related_content": {
@@ -69,6 +87,8 @@ let fakeData = {
               "slide_number": 1,
               "slide_title": "Multivariate",
               "duration": 5,
+              "transcription": "this is where the transcription goes",
+              "cover_photo": "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
               "summaries": ["summary 1 sentence", "summary 2 sentence" ],
               "keywords": [ "slide keyword 1", "slide keyword 2" ],
 
@@ -104,8 +124,8 @@ var PT_appState = "appState";
 var PT_selectedLectureNum = "selectedLectureNumber";
 var PT_selectedClass = "selectedClass";
 
-
-
+var PT_selectedClassID = "selectedClassID";
+var PT_selectedLectureID = "selectedLectureID";
 
 
 // Data Skeleton
@@ -114,7 +134,10 @@ let dataSkeleton = {
   // App State |
   [PT_appState]: {
     [PT_selectedClass]: "Math 24",
-    [PT_selectedLectureNum]: 2
+    [PT_selectedLectureNum]: 2,
+
+    [PT_selectedClassID]: 1,
+    [PT_selectedLectureID]: 1
   }
 
 
@@ -173,7 +196,9 @@ class App extends Component {
             classes={fakeData['classes']}
             update={this.update}
             selectedLectureTag={PT_selectedLectureNum}
-            selectedClassID={1}
+            selectedClassID={truth[PT_appState][PT_selectedClassID]}
+            selectedLectureID={truth[PT_appState][PT_selectedLectureID]}
+            selectedLectureIDTag ={PT_selectedLectureID}
           />
         </div>
       </div>

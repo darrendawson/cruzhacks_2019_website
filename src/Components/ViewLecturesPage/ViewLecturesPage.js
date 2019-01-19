@@ -9,8 +9,8 @@ class ViewLecturesPage extends Component {
 
   // On Click ------------------------------------------------------------------
 
-  onClick_SelectLecture = (lectureNumber) => {
-    this.props.update(lectureNumber, this.props.selectedLectureTag);
+  onClick_SelectLecture = (lectureID) => {
+    this.props.update(lectureID, this.props.selectedLectureIDTag);
   }
 
   // Render --------------------------------------------------------------------
@@ -21,14 +21,14 @@ class ViewLecturesPage extends Component {
       let video = this.props.videos[i];
 
       let borderCSS;
-      if (video['lecture_number'] === this.props.lectureNumber) {
+      if (video['lecture_id'] === this.props.selectedLectureID) {
         borderCSS = "video_container primary_highlight_3_bg";
       } else {
         borderCSS = "video_container primary_color_6_hover_bg"
       }
 
       results.push(
-        <div className={borderCSS} onClick={() => this.onClick_SelectLecture(video.lecture_number)}>
+        <div className={borderCSS} onClick={() => this.onClick_SelectLecture(video.lecture_id)}>
           <VideoCard
             title={video.lecture_title}
             date={video.date}
@@ -46,16 +46,18 @@ class ViewLecturesPage extends Component {
   renderSlides = () => {
     let results = [];
     for (let i = 0; i < this.props.slides.length; i++) {
+      let slide = this.props.slides[i];
+
       results.push (
         <SlideView
-          slideNumber={1}
-          duration={5}
-          summary={['summary point 1', 'summary point 2', 'summary point 3']}
-          keywords={['keyword 1', 'keyword 2']}
-          similarKeywords={['similar 1', 'similar 2']}
-          coverPhoto="https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/49259965-3e53-419d-a60b-0d5bb7591fd4/attachment-5/screen_primary_1_000s_search.jpg"
-          relatedLectures={[1]}
-          transcription="lorem ipsum"
+          slideNumber={slide.slide_number}
+          duration={slide.duration}
+          summary={slide.summaries}
+          keywords={slide.keywords}
+          similarKeywords={slide.related_content.keywords}
+          coverPhoto={slide.cover_photo}
+          relatedLectures={slide.related_content.lectures}
+          transcription={slide.transcription}
         />
       );
     }
