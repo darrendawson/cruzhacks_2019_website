@@ -1,0 +1,24 @@
+
+/* Color Scheme 1 ------------------------------------------------------------*/
+
+/* Primary Color: Red */
+.CS_1 .primary_color_1_txt { color: white !important; }
+.CS_1 .primary_color_1_hover_txt:hover { color: white !important }
+
+.CS_1 .primary_color_2_txt { color: #eae8e8 !important; }
+.CS_1 .primary_color_2_bg { background-color: #eae8e8 !important; }
+.CS_1 .primary_color_2_hover_txt:hover { color: #eae8e8 !important; }
+
+/* Primary Highlights: white->gray*/
+
+.CS_1 .primary_highlight_2_txt { color: #f90409 !important; }
+.CS_1 .primary_highlight_2_bg { background-color: #f90409 !important; }
+
+.CS_1 .primary_highlight_3_txt { color: #910b0d !important; }
+.CS_1 .primary_highlight_3_bg { background-color: #910b0d !important; }
+
+.CS_1 .primary_highlight_4_txt { color: #66090a !important; }
+.CS_1 .primary_highlight_4_bg { background-color: #66090a !important; }
+
+.CS_1 .primary_highlight_5_txt { color:  #420607 !important; }
+.CS_1 .primary_highlight_5_border { border-color:  #420607 !important; }

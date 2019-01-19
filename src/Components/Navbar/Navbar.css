@@ -1,0 +1,24 @@
+#NAVBAR {
+  height: calc(100% - 1px);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+#NAVBAR #links_container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+
+#NAVBAR .link_text {
+  margin-right: 20px;
+}
+
+#NAVBAR .title_text {
+  margin-left: 20px;
+}
