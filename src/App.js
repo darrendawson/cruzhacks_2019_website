@@ -6,6 +6,7 @@ import './Colors.css';
 
 // Components
 import Navbar from './Components/Navbar/Navbar.js';
+import ViewLecturesPage from './Components/ViewLecturesPage/ViewLecturesPage.js';
 
 
 class App extends Component {
@@ -16,7 +17,12 @@ class App extends Component {
           <Navbar/>
         </div>
 
-        <div id="app_body_container" className="primary_color_2_bg"></div>
+        <div id="app_body_container" className="primary_color_2_bg">
+          <ViewLecturesPage
+            courseTitle="Math 24"
+            lectureNumber={5}
+          />
+        </div>
       </div>
     );
   }
