@@ -52,6 +52,7 @@ class ViewLecturesPage extends Component {
         keywords={['keyword 1', 'keyword 2']}
         similarKeywords={['similar 1', 'similar 2']}
         coverPhoto="https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/49259965-3e53-419d-a60b-0d5bb7591fd4/attachment-5/screen_primary_1_000s_search.jpg"
+        relatedLectures={[1]}
       />
     );
   }
