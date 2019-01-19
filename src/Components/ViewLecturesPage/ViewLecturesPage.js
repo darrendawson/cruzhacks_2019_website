@@ -21,18 +21,18 @@ class ViewLecturesPage extends Component {
       let video = this.props.videos[i];
 
       let borderCSS;
-      if (video['lectureNumber'] === this.props.lectureNumber) {
+      if (video['lecture_number'] === this.props.lectureNumber) {
         borderCSS = "video_container primary_highlight_3_bg";
       } else {
         borderCSS = "video_container primary_color_6_hover_bg"
       }
 
       results.push(
-        <div className={borderCSS} onClick={() => this.onClick_SelectLecture(video.lectureNumber)}>
+        <div className={borderCSS} onClick={() => this.onClick_SelectLecture(video.lecture_number)}>
           <VideoCard
-            title={video.title}
+            title={video.lecture_title}
             date={video.date}
-            coverPhoto={video.coverPhoto}
+            coverPhoto={video.cover_photo}
             keywords={video.keywords}
             numKeywordsToRender={2}
           />
@@ -44,17 +44,22 @@ class ViewLecturesPage extends Component {
 
 
   renderSlides = () => {
-    return (
-      <SlideView
-        slideNumber={1}
-        duration={5}
-        summary={['summary point 1', 'summary point 2', 'summary point 3']}
-        keywords={['keyword 1', 'keyword 2']}
-        similarKeywords={['similar 1', 'similar 2']}
-        coverPhoto="https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/49259965-3e53-419d-a60b-0d5bb7591fd4/attachment-5/screen_primary_1_000s_search.jpg"
-        relatedLectures={[1]}
-      />
-    );
+    let results = [];
+    for (let i = 0; i < this.props.slides.length; i++) {
+      results.push (
+        <SlideView
+          slideNumber={1}
+          duration={5}
+          summary={['summary point 1', 'summary point 2', 'summary point 3']}
+          keywords={['keyword 1', 'keyword 2']}
+          similarKeywords={['similar 1', 'similar 2']}
+          coverPhoto="https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/49259965-3e53-419d-a60b-0d5bb7591fd4/attachment-5/screen_primary_1_000s_search.jpg"
+          relatedLectures={[1]}
+          transcription="lorem ipsum"
+        />
+      );
+    }
+    return results;
   }
 
 

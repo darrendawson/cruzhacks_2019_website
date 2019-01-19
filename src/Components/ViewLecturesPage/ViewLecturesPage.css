@@ -4,6 +4,10 @@
   display: flex;
 }
 
+#ClassesManager {
+  height: 100%;
+  width: 100%;
+}
 
 #ViewLecturesPage #sidebar_container {
   width: 500px;

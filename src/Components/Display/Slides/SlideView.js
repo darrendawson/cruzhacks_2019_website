@@ -57,7 +57,7 @@ class SlideView extends Component {
     if (this.state.expanded) {
       return (
         <div id="transcript_container">
-          <p>Lorem Ipsum</p>
+          <p>{this.props.transcription}</p>
         </div>
       );
     }
