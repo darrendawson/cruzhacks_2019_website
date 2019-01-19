@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
 import './ViewLecturesPage.css';
 
+import VideoCard from '../Display/VideoCard/VideoCard.js';
 
 class ViewLecturesPage extends Component {
 
 
   renderVideosSidebar = () => {
     let results = [];
-    for (let i = 0; i < this.props.videos; i++) {
-      let video = this.props.videos;
+    for (let i = 0; i < this.props.videos.length; i++) {
+      let video = this.props.videos[i];
       let borderCSS = (video['lectureNumber'] === this.props.lectureNumber) ? "selected_video_border": "";
 
       results.push(
-        <div className="test">
-
+        <div className="video_container primary_color_6_hover_bg">
+          <VideoCard
+            title={video.title}
+            date={video.date}
+            coverPhoto={video.coverPhoto}
+            keywords={video.keywords}
+            numKeywordsToRender={2}
+          />
         </div>
       );
     }
+    return results;
   }
 
 
@@ -37,7 +45,7 @@ class ViewLecturesPage extends Component {
             <div className="flex_grouping_row">
               <input
                 id="search_input"
-                placeholder="Search for a concept"
+                placeholder="Search by concept"
                 className="primary_highlight_3_border"
               />
               <button id="search_button" className="primary_highlight_3_border primary_highlight_3_hover_bg">

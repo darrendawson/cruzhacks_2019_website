@@ -1,0 +1,46 @@
+#VideoCard {
+  width: 400px;
+  margin-bottom: 25px;
+}
+
+#VideoCard #cover_photo {
+  height: 200px;
+  width: 100%;
+}
+
+#title_row_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#date_text {
+  font-size: 1.5em;
+}
+
+#title_text {
+  font-size: 1.7em;
+}
+
+#keywords_row {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.keyword_container {
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  margin: 5px;
+}
+
+.keyword_text {
+  font-size: 1.2em;
+}

@@ -9,10 +9,14 @@
 .CS_1 .primary_color_2_bg { background-color: #eae8e8 !important; }
 .CS_1 .primary_color_2_hover_txt:hover { color: #eae8e8 !important; }
 
+.CS_1 .primary_color_3_txt { color: #c6c6c6 !important; }
 .CS_1 .primary_color_3_border { border-color: #c6c6c6 !important; }
+.CS_1 .primary_color_3_5_txt {color: #969696 !important; }
 
+.CS_1 .primary_color_4_txt { color: #7c7c7c !important; }
+.CS_1 .primary_color_4_bg {background-color: #7c7c7c !important; }
 .CS_1 .primary_color_5_bg { background-color: #232323 !important; }
-
+.CS_1 .primary_color_6_hover_bg:hover { background-color: #161616 !important; }
 
 /* Primary Highlights: white->gray*/
 

@@ -8,6 +8,16 @@
 #ViewLecturesPage #sidebar_container {
   width: 500px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+#ViewLecturesPage .video_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #ViewLecturesPage #body_container {
