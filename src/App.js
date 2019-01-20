@@ -51,7 +51,7 @@ let fakeData = {
 
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 4}]
               }
             },
 
@@ -66,7 +66,7 @@ let fakeData = {
               "keywords": ["linear", "dependant", "vector", "linear transformation"],
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}]
               }
             },
             {
@@ -80,7 +80,7 @@ let fakeData = {
               "keywords": ["linear", "dependant", "vector", "linear transformation", "matrix"],
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}]
               }
             },
             {
@@ -94,7 +94,7 @@ let fakeData = {
               "keywords": ["Matrix", "Linear Transformation", "Linearly Dependant"],
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}]
               }
             },
 
@@ -109,7 +109,7 @@ let fakeData = {
               "keywords": ["Matrix", "Linear Transformation", "Multiplication"],
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}]
               }
             },
 
@@ -124,7 +124,7 @@ let fakeData = {
               "keywords": ["nullspace", "Independence", "Solution", "Matrix", "Sample Space"],
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}]
               }
             },
           ]
@@ -151,7 +151,7 @@ let fakeData = {
 
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}, {class_id: 1, lecture_id: 1}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}, {class_id: 1, lecture_id: 1, slide_id: 2}]
               }
             },
 
@@ -167,7 +167,7 @@ let fakeData = {
 
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}]
               }
             },
 
@@ -183,7 +183,7 @@ let fakeData = {
 
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}]
               }
             },
 
@@ -199,7 +199,7 @@ let fakeData = {
 
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}]
               }
             },
 
@@ -215,7 +215,7 @@ let fakeData = {
 
               "related_content": {
                 "keywords": ["related keyword 1"],
-                "lectures": [{class_id: 1, lecture_id: 2}]
+                "lectures": [{class_id: 1, lecture_id: 2, slide_id: 2}]
               }
             },
           ]
@@ -316,10 +316,11 @@ class App extends Component {
 
             classes={fakeData['classes']}
             update={this.update}
-            selectedLectureTag={PT_selectedLectureNum}
             selectedClassID={truth[PT_appState][PT_selectedClassID]}
+            selectedClassIDTag={PT_selectedClassID}
             selectedLectureID={truth[PT_appState][PT_selectedLectureID]}
             selectedLectureIDTag ={PT_selectedLectureID}
+            appStateTag={PT_appState}
           />
         </div>
       </div>

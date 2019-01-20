@@ -77,8 +77,11 @@ class ClassesManager extends Component {
 
           classes={this.props.classes}
           update={this.props.update}
+          selectedClassID={this.props.selectedClassID}
+          selectedClassIDTag={this.props.selectedClassIDTag}
           selectedLectureID={this.props.selectedLectureID}
           selectedLectureIDTag={this.props.selectedLectureIDTag}
+          appStateTag={this.props.appStateTag}
         />
       </div>
     );

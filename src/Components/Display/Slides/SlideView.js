@@ -72,13 +72,15 @@ class SlideView extends Component {
         let lecture = this.props.relatedLectures[i];
 
         results.push(
-          <VideoCard
-            title={lecture.class_name + " " + lecture.lecture_title}
-            date={lecture.date}
-            coverPhoto={lecture.cover_photo}
-            keywords={lecture.keywords}
-            numKeywordsToRender={2}
-          />
+          <div onClick={() => this.props.onClick_SelectNewLecture(lecture.class_id, lecture.lecture_id)}>
+            <VideoCard
+              title={lecture.class_name + " " + lecture.lecture_title}
+              date={lecture.date}
+              coverPhoto={lecture.cover_photo}
+              keywords={lecture.keywords}
+              numKeywordsToRender={2}
+            />
+          </div>
         );
       }
 

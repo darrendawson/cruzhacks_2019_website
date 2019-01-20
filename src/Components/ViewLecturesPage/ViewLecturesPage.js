@@ -13,6 +13,13 @@ class ViewLecturesPage extends Component {
     this.props.update(lectureID, this.props.selectedLectureIDTag);
   }
 
+  onClick_SelectNewLecture = (classID, lectureID) => {
+    let newState = {
+      [this.props.selectedClassIDTag]: classID,
+      [this.props.selectedLectureIDTag]: lectureID
+    }
+    this.props.update(newState, this.props.appStateTag);
+  }
   // Render --------------------------------------------------------------------
 
   renderVideosSidebar = () => {
@@ -50,6 +57,7 @@ class ViewLecturesPage extends Component {
 
       results.push (
         <SlideView
+          onClick_SelectNewLecture={this.onClick_SelectNewLecture}
           slideNumber={slide.slide_number}
           duration={slide.duration}
           summary={slide.summaries}
