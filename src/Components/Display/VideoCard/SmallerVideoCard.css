@@ -6,6 +6,7 @@
   align-items: center;
   margin: 20px;
   border: 1px solid black;
+  flex-shrink: 0;
 }
 
 #SmallerVideoCard .flex_space_between {

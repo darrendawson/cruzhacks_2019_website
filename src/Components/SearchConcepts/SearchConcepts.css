@@ -1,0 +1,47 @@
+#SearchConcepts {
+  height: 100%;
+  width: 100%;
+}
+
+
+#SearchConcepts .concepts_container {
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#SearchConcepts #concept_div {
+  height: 40px;
+  display: flex;
+  margin: 5px 15px 5px 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#SearchConcepts #boundary_line {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 30px;
+  height: 1px;
+}
+
+#SearchConcepts #lectures_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#SearchConcepts #card_container {
+  flex-shrink: 0;
+  margin: 30px;
+}
+
+#SearchConcepts #title {
+  font-size: 3.5em;
+  margin-top: 20px;
+}

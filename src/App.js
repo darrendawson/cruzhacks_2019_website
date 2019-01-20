@@ -29,12 +29,13 @@ let fakeData = {
     {
       "class_id": 1,
       "class_name": "Math 24",
+      "keywords": ["keywords", "key 2", "key 3", "Linear Transformation"],
       "lectures": [
         {
           "lecture_id": 1,
           "lecture_number": 1,
           "date": "01/23",
-          "keywords": ["Syllabus", "Finals", "Grades"],
+          "keywords": ["Syllabus", "Finals", "Grades", "Linear Transformation"],
           "lecture_title": "Syllabus + Chapter 0",
           "cover_photo": "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
 

@@ -114,7 +114,7 @@ class SlideView extends Component {
         id="SlideView"
         className=""
         onClick={this.onClick_ToggleExpanded}>
-        <div className="half_container_column primary_color_3_border">
+        <div className="half_container_column primary_color_3_border primary_highlight_3_hover_border">
           <div id="about_slide_container">
             <img id="cover_photo" src={this.props.coverPhoto}/>
             <div className="slide_summary_container">
@@ -130,7 +130,7 @@ class SlideView extends Component {
           {this.renderTranscript()}
         </div>
 
-        <div className="half_container primary_color_3_border">
+        <div className="half_container primary_color_3_border primary_highlight_3_hover_border">
           <div className="flex_column">
             <h1 id="slide_title">Related Content</h1>
             <h2>Keywords</h2>

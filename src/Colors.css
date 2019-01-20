@@ -17,6 +17,7 @@
 
 .CS_1 .primary_color_4_txt { color: #7c7c7c !important; }
 .CS_1 .primary_color_4_bg {background-color: #7c7c7c !important; }
+.CS_1 .primary_color_4_hover_bg:hover {background-color: #7c7c7c !important; }
 .CS_1 .primary_color_5_bg { background-color: #232323 !important; }
 .CS_1 .primary_color_5_txt { color: #232323 !important; }
 .CS_1 .primary_color_5_border { border-color: #232323 !important; }
@@ -26,15 +27,19 @@
 
 .CS_1 .primary_highlight_2_txt { color: #f90409 !important; }
 .CS_1 .primary_highlight_2_bg { background-color: #f90409 !important; }
+.CS_1 .primary_highlight_2_hover_border:hover {border-color: #f90409 !important; }
 
 .CS_1 .primary_highlight_3_txt { color: #910b0d !important; }
 .CS_1 .primary_highlight_3_bg { background-color: #910b0d !important; }
 .CS_1 .primary_highlight_3_border { border-color: #910b0d !important; }
 .CS_1 .primary_highlight_3_hover_bg:hover { background-color: #910b0d !important; }
+.CS_1 .primary_highlight_3_hover_border:hover { border-color: #910b0d !important; }
 
 .CS_1 .primary_highlight_4_txt { color: #66090a !important; }
 .CS_1 .primary_highlight_4_bg { background-color: #66090a !important; }
+.CS_1 .primary_highlight_4_hover_bg:hover { background-color: #66090a !important; }
 .CS_1 .primary_highlight_4_border { border-color: #66090a !important; }
 
 .CS_1 .primary_highlight_5_txt { color:  #420607 !important; }
+.CS_1 .primary_highlight_5_hover_bg:hover { color:  #420607 !important; }
 .CS_1 .primary_highlight_5_border { border-color:  #420607 !important; }

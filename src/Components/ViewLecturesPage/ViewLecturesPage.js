@@ -3,8 +3,18 @@ import './ViewLecturesPage.css';
 
 import VideoCard from '../Display/VideoCard/VideoCard.js';
 import SlideView from '../Display/Slides/SlideView.js';
+import SearchConcepts from '../SearchConcepts/SearchConcepts.js';
 
 class ViewLecturesPage extends Component {
+
+
+  constructor() {
+    super();
+
+    this.state = {
+      searchBarInput: ""
+    };
+  }
 
 
   // On Click ------------------------------------------------------------------
@@ -20,6 +30,14 @@ class ViewLecturesPage extends Component {
     }
     this.props.update(newState, this.props.appStateTag);
   }
+
+  // Search Bar Input ----------------------------------------------------------
+
+  // updates input text when someone types in input field
+  updateInputText = (event) => {
+    this.setState({searchBarInput: event.target.value});
+  }
+
   // Render --------------------------------------------------------------------
 
   renderVideosSidebar = () => {
@@ -73,14 +91,48 @@ class ViewLecturesPage extends Component {
   }
 
 
-  render() {
-    return (
-      <div id="ViewLecturesPage" className="">
-        <div id="sidebar_container" className="primary_color_5_bg">
-          {this.renderVideosSidebar()}
-        </div>
 
-        <div id="body_container" className="">
+  renderBody = () => {
+
+    if (this.props.renderSearchResults) {
+
+      return (
+        <div id="body_container">
+          <div id="top_row" className="primary_color_3_border">
+            <div className="flex_grouping_row">
+              <h1 id="course_title">{this.props.courseTitle}: </h1>
+              <h1 id="lecture_title" className="primary_highlight_3_txt">Lecture {this.props.selectedLectureID}</h1>
+            </div>
+
+            <div className="flex_grouping_row">
+              <input
+                id="search_input_extended"
+                placeholder="Search by concept, keyword, or class"
+                className="primary_highlight_3_border"
+                value={this.state.searchBarInput}
+                onChange={this.updateInputText.bind(this)}
+              />
+              <button id="search_button" className="primary_highlight_3_border primary_highlight_3_hover_bg">
+                <h1 id="search_button_text" className="primary_highlight_3_txt primary_color_1_hover_txt">&#x26B2;</h1>
+              </button>
+            </div>
+          </div>
+
+
+          <div id="search_concepts_container">
+            <SearchConcepts
+              searchText={this.state.searchBarInput}
+              classes={this.props.classes}
+            />  
+          </div>
+
+        </div>
+      );
+
+
+    } else {
+      return (
+        <div id="body_container">
           <div id="top_row" className="primary_color_3_border">
             <div className="flex_grouping_row">
               <h1 id="course_title">{this.props.courseTitle}: </h1>
@@ -103,6 +155,18 @@ class ViewLecturesPage extends Component {
             {this.renderSlides()}
           </div>
         </div>
+      );
+    }
+  }
+
+  render() {
+    return (
+      <div id="ViewLecturesPage" className="">
+        <div id="sidebar_container" className="primary_color_5_bg">
+          {this.renderVideosSidebar()}
+        </div>
+
+        {this.renderBody()}
       </div>
     );
   }

@@ -82,6 +82,8 @@ class ClassesManager extends Component {
           selectedLectureID={this.props.selectedLectureID}
           selectedLectureIDTag={this.props.selectedLectureIDTag}
           appStateTag={this.props.appStateTag}
+
+          renderSearchResults={true}
         />
       </div>
     );
