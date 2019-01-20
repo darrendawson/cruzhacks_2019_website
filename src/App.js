@@ -46,8 +46,8 @@ let fakeData = {
               "duration": 5,
               "transcription": "this is where the transcription goes",
               cover_photo:  "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
-              "summaries": ["summary 1 sentence", "summary 2 sentence" ],
-              "keywords": [ "slide keyword 1", "slide keyword 2" ],
+              "summaries": ["Set you are mapping to y is the codomain", "A map is an association", "we just have to draw 2 axes" ],
+              "keywords": [ "domain", "matrix", "vectors", "transformation" ],
 
               "related_content": {
                 "keywords": ["related keyword 1"],
@@ -58,18 +58,75 @@ let fakeData = {
             {
               "slide_id": 2,
               "slide_number": 2,
-              "slide_title": "Multivariate",
-              "duration": 5,
-              "transcription": "Here's your grade",
+              "slide_title": "Linear Transformations",
+              "duration": 4.5,
+              "transcription": "Linear transformations are ....",
               cover_photo:  "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
-              "summaries": ["Tests make up 20% of your grade", "No Calculator allowed" ],
-              "keywords": [ "slide keyword 1", "slide keyword 2" ],
-
+              "summaries": [ "We have 2 vectors in our domain", "C is a scalar real number", "transformation is a mapping like a function" ],
+              "keywords": ["linear", "dependant", "vector", "linear transformation"],
               "related_content": {
                 "keywords": ["related keyword 1"],
                 "lectures": [{class_id: 1, lecture_id: 2}]
               }
-            }
+            },
+            {
+              "slide_id": 3,
+              "slide_number": 3,
+              "slide_title": "Visualizing Linear Transformations",
+              "duration": 5,
+              "transcription": "Here's how to render a linear transformation ....",
+              cover_photo:  "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
+              "summaries": [ "One-dimensional space is simply the number line", "Linear Transformations of One Dimensional Space", "vector output vectors" ],
+              "keywords": ["linear", "dependant", "vector", "linear transformation", "matrix"],
+              "related_content": {
+                "keywords": ["related keyword 1"],
+                "lectures": [{class_id: 1, lecture_id: 2}]
+              }
+            },
+            {
+              "slide_id": 4,
+              "slide_number": 4,
+              "slide_title": "Matrixes",
+              "duration": 3,
+              "transcription": "Here's how to render a linear transformation ....",
+              cover_photo:  "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
+              "summaries": [ "examples" ],
+              "keywords": ["Matrix", "Linear Transformation", "Linearly Dependant"],
+              "related_content": {
+                "keywords": ["related keyword 1"],
+                "lectures": [{class_id: 1, lecture_id: 2}]
+              }
+            },
+
+            {
+              "slide_id": 5,
+              "slide_number": 5,
+              "slide_title": "Products",
+              "duration": 3,
+              "transcription": "Here's how to render a linear transformation ....",
+              cover_photo:  "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
+              "summaries": [ "Matrix multiplication is a linear transformation" ],
+              "keywords": ["Matrix", "Linear Transformation", "Multiplication"],
+              "related_content": {
+                "keywords": ["related keyword 1"],
+                "lectures": [{class_id: 1, lecture_id: 2}]
+              }
+            },
+
+            {
+              "slide_id": 6,
+              "slide_number": 6,
+              "slide_title": "Kernel",
+              "duration": 3,
+              "transcription": "Here's how to render a linear transformation ....",
+              cover_photo:  "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
+              "summaries": [ "The null space is the solution to a problem", "The Kernel is the nullspace" ],
+              "keywords": ["nullspace", "Independence", "Solution", "Matrix", "Sample Space"],
+              "related_content": {
+                "keywords": ["related keyword 1"],
+                "lectures": [{class_id: 1, lecture_id: 2}]
+              }
+            },
           ]
         },
 
@@ -78,25 +135,89 @@ let fakeData = {
           "lecture_number": 2,
           "date": "01/23",
           "keywords": ["Lecture Keyword 1", "Lecture Keyword 2", "Lecture Keyword 3"],
-          "lecture_title": "Lecture 2",
+          "lecture_title": "Applications of Linear Transformations",
           "cover_photo": "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
 
           "slides": [
             {
               "slide_id": 1,
               "slide_number": 1,
-              "slide_title": "Multivariate",
+              "slide_title": "Scaling and Reflections",
+              "duration": 2,
+              "transcription": "this is where the transcription goes",
+              "cover_photo": "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
+              "summaries": ["Linear transformations can scale and reflect matrixes" ],
+              "keywords": [ "Linear Transformation", "Scaling", "Reflecting" ],
+
+              "related_content": {
+                "keywords": ["related keyword 1"],
+                "lectures": [{class_id: 1, lecture_id: 2}, {class_id: 1, lecture_id: 1}]
+              }
+            },
+
+            {
+              "slide_id": 2,
+              "slide_number": 2,
+              "slide_title": "Rotations",
               "duration": 5,
               "transcription": "this is where the transcription goes",
               "cover_photo": "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
-              "summaries": ["summary 1 sentence", "summary 2 sentence" ],
-              "keywords": [ "slide keyword 1", "slide keyword 2" ],
+              "summaries": ["Vectors have a magnitude and a direction", "Rotations are vectors" ],
+              "keywords": [ "Rotations", "Linear Transformation", "Vectors" ],
 
               "related_content": {
                 "keywords": ["related keyword 1"],
                 "lectures": [{class_id: 1, lecture_id: 2}]
               }
-            }
+            },
+
+            {
+              "slide_id": 3,
+              "slide_number": 3,
+              "slide_title": "Unit Vectors",
+              "duration": 5,
+              "transcription": "this is where the transcription goes",
+              "cover_photo": "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
+              "summaries": ["Unit vectors have a magnitude of 1"],
+              "keywords": [ "Vectors", "Unit Vector", "Magnitude" ],
+
+              "related_content": {
+                "keywords": ["related keyword 1"],
+                "lectures": [{class_id: 1, lecture_id: 2}]
+              }
+            },
+
+            {
+              "slide_id": 4,
+              "slide_number": 4,
+              "slide_title": "Projections",
+              "duration": 5,
+              "transcription": "this is where the transcription goes",
+              "cover_photo": "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
+              "summaries": ["Projections are based off perpendicular vectors" ],
+              "keywords": [ "Linear", "Projection", "Vector" ],
+
+              "related_content": {
+                "keywords": ["related keyword 1"],
+                "lectures": [{class_id: 1, lecture_id: 2}]
+              }
+            },
+
+            {
+              "slide_id": 5,
+              "slide_number": 5,
+              "slide_title": "More Linear",
+              "duration": 1,
+              "transcription": "this is where the transcription goes",
+              "cover_photo": "https://opencast-player-1.lt.ucsc.edu:8443/static/learn_tech/engage-player/71b03908-f1f0-4775-b106-36e786238570/attachment-5/screen_primary_1_000s_search.jpg",
+              "summaries": ["Linear is hard"],
+              "keywords": [ "Linear"],
+
+              "related_content": {
+                "keywords": ["related keyword 1"],
+                "lectures": [{class_id: 1, lecture_id: 2}]
+              }
+            },
           ]
         }
       ]

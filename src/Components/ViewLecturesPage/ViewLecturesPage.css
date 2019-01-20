@@ -46,6 +46,8 @@
   height: calc(100% - 81px);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 
