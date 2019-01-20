@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './SlideView.css';
 
 import VideoCard from '../VideoCard/VideoCard.js';
+import SmallerVideoCard from '../VideoCard/SmallerVideoCard.js';
 
 class SlideView extends Component {
 
@@ -73,8 +74,20 @@ class SlideView extends Component {
 
         results.push(
           <div onClick={() => this.props.onClick_SelectNewLecture(lecture.class_id, lecture.lecture_id)}>
+
+            {/*
             <VideoCard
               title={lecture.class_name + " " + lecture.lecture_title}
+              date={lecture.date}
+              coverPhoto={lecture.cover_photo}
+              keywords={lecture.keywords}
+              numKeywordsToRender={2}
+            />
+            */}
+
+            <SmallerVideoCard
+              className={lecture.class_name}
+              lectureTitle={lecture.lecture_title}
               date={lecture.date}
               coverPhoto={lecture.cover_photo}
               keywords={lecture.keywords}
@@ -84,7 +97,14 @@ class SlideView extends Component {
         );
       }
 
-      return results;
+      return (
+        <div>
+          <h1 id="related_to_lectures_title">Related Lectures</h1>
+          <div id="related_lectures_container">
+            {results}
+          </div>
+        </div>
+      );
     }
   }
 

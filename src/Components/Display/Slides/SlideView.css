@@ -93,3 +93,15 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+#SlideView #related_to_lectures_title {
+  text-align: left;
+  margin-top: 10px;
+}
+
+#SlideView #related_lectures_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

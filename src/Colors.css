@@ -2,13 +2,15 @@
 /* Color Scheme 1 ------------------------------------------------------------*/
 
 /* Primary Color: Red */
+.CS_1 .primary_color_1_bg { background-color: white !important; }
 .CS_1 .primary_color_1_txt { color: white !important; }
 .CS_1 .primary_color_1_hover_txt:hover { color: white !important }
-
 .CS_1 .primary_color_2_txt { color: #eae8e8 !important; }
 .CS_1 .primary_color_2_bg { background-color: #eae8e8 !important; }
 .CS_1 .primary_color_2_hover_txt:hover { color: #eae8e8 !important; }
+.CS_1 .primary_color_2_5_bg { background-color: #dbdbdb !important; }
 
+.CS_1 .primary_color_3_bg { background-color: #c6c6c6 !important; }
 .CS_1 .primary_color_3_txt { color: #c6c6c6 !important; }
 .CS_1 .primary_color_3_border { border-color: #c6c6c6 !important; }
 .CS_1 .primary_color_3_5_txt {color: #969696 !important; }
@@ -16,6 +18,8 @@
 .CS_1 .primary_color_4_txt { color: #7c7c7c !important; }
 .CS_1 .primary_color_4_bg {background-color: #7c7c7c !important; }
 .CS_1 .primary_color_5_bg { background-color: #232323 !important; }
+.CS_1 .primary_color_5_txt { color: #232323 !important; }
+.CS_1 .primary_color_5_border { border-color: #232323 !important; }
 .CS_1 .primary_color_6_hover_bg:hover { background-color: #161616 !important; }
 
 /* Primary Highlights: white->gray*/

@@ -1,0 +1,20 @@
+#SmallerVideoCard {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  align-items: center;
+  margin: 20px;
+  border: 1px solid black;
+}
+
+#SmallerVideoCard .flex_space_between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#SmallerVideoCard #cover_photo {
+  width: calc(100% - 20px);
+  margin: 0px;
+}

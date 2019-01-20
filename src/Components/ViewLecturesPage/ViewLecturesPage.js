@@ -84,7 +84,7 @@ class ViewLecturesPage extends Component {
           <div id="top_row" className="primary_color_3_border">
             <div className="flex_grouping_row">
               <h1 id="course_title">{this.props.courseTitle}: </h1>
-              <h1 id="lecture_title" className="primary_highlight_3_txt">Lecture {this.props.lectureNumber}</h1>
+              <h1 id="lecture_title" className="primary_highlight_3_txt">Lecture {this.props.selectedLectureID}</h1>
             </div>
 
             <div className="flex_grouping_row">
